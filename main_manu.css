@@ -1,5 +1,5 @@
-.wrap{
-  margin: 0 auto;
+body{
+  margin: 0;
 }
 ul, li{
   list-style: none;
@@ -7,6 +7,17 @@ ul, li{
 }
 a{
   text-decoration: none;
+}
+div{
+  border: 1px solid #CCCCCC;
+}
+.des1, .des2{
+  width: 500px;
+  display: inline-block;
+}
+.des2{
+  width: 500px;
+  display: inline-block
 }
 .des1 img.content_image_left{
   position: absolute;
@@ -18,41 +29,43 @@ a{
   top: 10px;
   right: 10px;
 }
-.wrap, .header, .footer{
-  width: 1500px;
+#wrap, #header, #footer{
+  width: 100vw
 }
-.header{
+#header{
   position: relative;
-  height: 500px;
+  height: 90vh;
   background-image: url('image/grass.jpg');
   background-size: 100% 100%;
+  overflow: hidden;
 }
-#title, #title_text{
+.title, .title_text{
   position: absolute;
 }
-#title_text{
+.title_text{
   left: 50px;
   top: 100px;
 }
-#title{
+.title{
   left: 50px;
   top: 50px;
 }
-.container{
-  width: 1200px;
+#container{
+  width: 100vw;
   height: 1000px;
   padding-top: 100px;
-  padding-left: 150px;
-  padding-right: 150px;
+  position: relative;
 }
-.container .des1{
-  margin-bottom: 50px;
+#container .des1{
+  margin: 0 0 50px 0;
   position: relative;
   text-align: right;
   height: 200px;
+  left: 70px;
 }
-.container .des2{
-  margin-bottom: 50px;
+#container .des2{
+  margin: 0 0 50px 0;
+  margin-left: 0;
   position: relative;
   text-align: left;
   height: 200px;
@@ -77,8 +90,9 @@ a{
   left: 50px;
   top: 60px;
 }
-.footer{
+#footer{
   height: 70px;
+  background-color: RGB(44, 42, 43);
 }
 .menu_bar{
   position: absolute;
@@ -91,7 +105,7 @@ a{
 }
 .menu_bar .dep1 > li{
   display: inline-block;
-  width: 500px;
+  width: calc(100vw / 3);
   vertical-align: top;
   background: #ddd;
   font-size: 16px;
@@ -117,17 +131,23 @@ a{
 .menu_bar .dep2 a:hover{
   text-decoration: underline;
 }
-.top_button{
-  position: fixed;
-  bottom: 70px;
-  left: 50%;
-  width: 100px;
-  height: 40px;
-  line-height: 40px;
-  margin-left: -50px;
-  vertical-align: middle;
+#go_top{
+  width:50px;
+  height:50px;
+  padding:0;
+  line-height: 50px;;
+  display: block;
+  background: #1c485c;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 25px;
   text-align: center;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 999999;
 }
 .footer_inner{
-
+  border: none;
+  color: white;
 }
