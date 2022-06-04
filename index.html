@@ -4,39 +4,78 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="main_manu.css">
     <title>term_project</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="fadein.js"></script>
+    <script type="text/javascript" src="scroll_top.js"></script>
   </head>
   <body>
     <div id="wrap">
       <div id="header">
-        <span class="title">
-          <h1>hello</h1>
-        </span>
-        <span class="title_text">
-          <p>group D</p>
-        </span>
+        <div class="header_slidewrap">
+          <input type="radio" name="slide" id="slide01" checked>
+          <input type="radio" name="slide" id="slide02">
+          <input type="radio" name="slide" id="slide03">
+          <div class="slide-wrap">
+            <ul class="slidelist">
+              <li>
+                <a>
+                  <label for="slide03" class="left"></label>
+                  <div class="textbox">
+        						<h3>첫번째 슬라이드</h3>
+        						<p>첫번째 슬라이드 입니다.</p>
+        					</div>
+                  <img src="image/slide01.jpg">
+                  <label for="slide02" class="right"></label>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <label for="slide01" class="left"></label>
+                  <div class="textbox">
+        						<h3>두번째 슬라이드</h3>
+        						<p>두번째 슬라이드 입니다.</p>
+        					</div>
+                  <img src="image/slide02.jpg">
+                  <label for="slide03" class="right"></label>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <label for="slide02" class="left"></label>
+                  <div class="textbox">
+        						<h3>세번째 슬라이드</h3>
+        						<p>세번째 슬라이드 입니다.</p>
+        					</div>
+                  <img src="image/slide03.jpg">
+                  <label for="slide01" class="right"></label>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div class="menu_bar">
           <ul class="dep1">
             <li>
-              <a href="sub_page.html">menu1</a>
               <ul class="dep2">
                 <li><a href="#">text1_1</a></li>
                 <li><a href="#">text1_2</a></li>
                 <li><a href="#">text1_3</a></li>
               </ul>
+              <a href="#">menu1</a>
             </li>
             <li>
-              <a href="#">menu2</a>
               <ul class="dep2">
                 <li><a href="#">text2_1</a></li>
                 <li><a href="#">text2_2</a></li>
                 <li><a href="#">text2_3</a></li>
               </ul>
+              <a href="#">menu2</a>
             </li>
             <li>
-              <a href="#">menu3</a>
               <ul class="dep2">
                 <li><a href="#">text3_1</a></li>
               </ul>
+              <a href="#">menu3</a>
             </li>
           </ul>
         </div>
@@ -59,7 +98,7 @@
         </div>
       </div>
       <div id="go_top">
-        <a href="#title">top</a>
+        <a href="#wrap">top</a>
       </div>
     </div>
   </body>
