@@ -1,0 +1,287 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+ul, li{ /*메뉴바 중요*/
+  list-style: none;
+  display: inline;
+}
+a{
+  text-decoration: none;
+}
+
+div{
+  border: 1px solid #CCCCCC;
+}
+.des1 img.content_image_left{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.des2 img.content_image_right{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#wrap, #header, #footer{
+  width: 1920px;
+}
+#header{
+  position: relative;
+  height: 900px;
+  overflow: hidden;
+}
+#container{
+  width: 1920px;
+  height: 1000px;
+  position: relative;
+  background-image: url(https://photo.coolenjoy.net/data/editor/2012/3b1073c47486832be39b309351f940f5f3b179ea.png);
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: 100% 100%;
+}
+#container .des1, #container .des2{
+  border: 1px solid rgba(217, 217, 217, 0.5);
+  position: relative;
+  height: 400px;
+  width: 900px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: rgba(217, 217, 217, 0.5);
+}
+
+/*#container .des2{
+  left: calc(100vw - 1100px);
+}
+*/
+.des1 img.content_image_left{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.des2 img.content_image_right{
+  position: absolute;
+
+  top: 10px;
+  right: 10px;
+}
+.des1 > h1{
+  position: absolute;
+  right: 50px;
+  top: 10px;
+}
+.des1 > p{
+  position: absolute;
+  right: 50px;
+  top: 60px;
+}
+.des2 > h1{
+  position: absolute;
+
+  left: 50px;
+  top: 10px;
+}
+.des2 > p{
+  position: absolute;
+
+  left: 50px;
+  top: 60px;
+}
+
+// 메뉴바 부분 시작
+.menu_bar{
+  position: absolute;
+  bottom: 0;
+  width: inherit;
+}
+.menu_bar .dep1{
+  font-size: 0;
+  padding: 0;
+}
+.menu_bar .dep1 > li{
+  display: inline-block;
+  width: calc(1920px / 3);
+  vertical-align: bottom;
+  background: #ddd;
+  font-size: 16px;
+  text-align: center;
+}
+.menu_bar .dep1 > li:hover > .dep2 {
+  display: block;
+}
+.menu_bar .dep1 > li > a{
+  display: block;
+  padding: 10px 0;
+}
+.menu_bar .dep2{
+  display: none;
+}
+.menu_bar .dep2 a{
+  display: block;
+  padding: 10px 0;
+}
+.menu_bar .dep2 a:hover{
+  text-decoration: underline;
+}
+// 메뉴바 부분 종료
+
+.goupbtn {
+  top: 60%;
+  left: 80%;
+  width: 50px;
+  height: 50px;
+  border-radius: 80%;
+  background-color: #ffffff;
+  border: red 3px solid;
+  position: fixed;
+  z-index: 2;
+}
+#go_top{
+  width:50px;
+  height:50px;
+  padding:0;
+  line-height: 50px;;
+  display: block;
+  background: RGB(58, 181, 74);
+  color: #000000;
+  font-size: 12px;
+  border-radius: 25px;
+  text-align: center;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 999999;
+}
+#footer{
+  position: relative;
+  height: 70px;
+  background-color: RGB(44, 42, 43);
+}
+.footer_inner{
+  margin: 0 auto;
+  text-align: center;
+  border: none;
+  color: white;
+}
+.header_slidewrap input[id*="slide"]{
+  display:none;
+}
+.header_slidewrap .slide-wrap{
+  max-width: inherit;
+  min-width: 1521px;
+  margin:0 auto;
+}
+.header_slidewrap .slidelist{
+  white-space:nowrap;
+  font-size:0;
+  overflow:hidden;
+}
+.header_slidewrap .slidelist > li{
+  display:inline-block;
+  vertical-align:middle;
+  width:100%;
+  transition:all .5s;
+}
+.header_slidewrap .slidelist > li > a{
+  display:block;
+  position:relative;
+}
+.header_slidewrap .slidelist > li > a img{
+  width:1920px;
+  height:1080px;
+}
+.header_slidewrap .slidelist label{
+  position:absolute;
+  top:40%;
+  z-index:10;
+  transform:translateY(-50%);
+  padding:50px;
+  cursor:pointer;
+}
+.header_slidewrap .slidelist .left{
+  left:30px;
+  background:url('image/left.png') center center / 100% no-repeat;
+}
+.header_slidewrap .slidelist .right{
+  right:30px;
+  background:url('image/right.png') center center / 100% no-repeat;
+}
+.header_slidewrap .slidelist .textbox{
+  position:absolute;
+  z-index:1;
+  top:10%;
+  left:10%;
+  line-height:1.6;
+  text-align:center;
+}
+.header_slidewrap .slidelist .textbox h3{
+  font-size:50px;
+  color:#fff;
+  opacity:0;
+  transform:translateY(30px);
+  transition:all .5s;
+}
+.header_slidewrap .slidelist .textbox p{
+  font-size:24px;
+  color:#fff;
+  opacity:0;
+  transform:translateY(30px);
+  transition:all .5s;
+}
+.header_slidewrap input[id="slide01"]:checked ~ .slide-wrap .slidelist > li{
+  transform:translateX(0%);
+}
+.header_slidewrap input[id="slide02"]:checked ~ .slide-wrap .slidelist > li{
+  transform:translateX(-100%);
+}
+.header_slidewrap input[id="slide03"]:checked ~ .slide-wrap .slidelist > li{
+  transform:translateX(-200%);
+}
+
+.header_slidewrap input[id="slide01"]:checked ~ .slide-wrap li:nth-child(1) .textbox h3{
+  opacity:1;
+  transform:translateY(0);
+  transition-delay:.2s;
+}
+.header_slidewrap input[id="slide01"]:checked ~ .slide-wrap li:nth-child(1) .textbox p{
+  opacity:1;
+  transform:translateY(0);
+  transition-delay:.4s;
+}
+.header_slidewrap input[id="slide02"]:checked ~ .slide-wrap li:nth-child(2) .textbox h3{
+  opacity:1;
+  transform:translateY(0);
+  transition-delay:.2s;
+}
+.header_slidewrap input[id="slide02"]:checked ~ .slide-wrap li:nth-child(2) .textbox p{
+  opacity:1;
+  transform:translateY(0);
+  transition-delay:.4s;
+}
+.header_slidewrap input[id="slide03"]:checked ~ .slide-wrap li:nth-child(3) .textbox h3{
+  opacity:1;
+  transform:translateY(0);
+  transition-delay:.2s;
+}
+.header_slidewrap input[id="slide03"]:checked ~ .slide-wrap li:nth-child(3) .textbox p{
+  opacity:1;
+  transform:translateY(0);
+  transition-delay:.4s;
+}
+.des1{
+  opacity: 0;
+  margin-left: -300px;
+  max-width: 100%;
+}
+.des2{
+
+  opacity: 0;
+  margin-left: 1300px;
+  max-width: 100%;
+}
+
+#all {
+  display: table; margin-left: auto; margin-right: auto; 
+  /*출처: https://webdir.tistory.com/31 [WEBDIR:티스토리]*/
+}
