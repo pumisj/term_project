@@ -1,18 +1,17 @@
 *{
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
-ul, li{ /*메뉴바 중요*/
+body{
+  margin: 0 auto;
+}
+ul, li{
   list-style: none;
   display: inline;
 }
 a{
   text-decoration: none;
 }
-
-div{
-  border: 1px solid #CCCCCC;
-}
 .des1 img.content_image_left{
   position: absolute;
   top: 10px;
@@ -23,77 +22,108 @@ div{
   top: 10px;
   right: 10px;
 }
-
-#wrap, #header, #footer{
+table{
+  border-collapse: collapse;
   width: 1920px;
+}
+td{
+  padding: 0;
+}
+.table_backGround1, .table_backGround2, .table_img3{
+  width: 960px;
+  height: 575px;
+}
+.table_img1, .table_img2{
+  width: 480px;
+  height: 575px;
+  background-color: RGB(18, 49, 50);
+}
+.table_img3{
+  background-color: RGB(252, 253, 255);
+}
+.table_backGround1{
+  background-color: RGB(252, 253, 255);
+}
+.table_backGround2{
+  background-color: RGB(18, 49, 50);
+}
+#wrap, #header, #footer{
+  width: 1920px
 }
 #header{
   position: relative;
-  height: 900px;
+  height: 950px;
   overflow: hidden;
 }
 #container{
   width: 1920px;
-  height: 1000px;
+  height: 3600px;
+  margin: 20px 0 0 0;
+  padding-top: 100px;
   position: relative;
-  background-image: url(https://photo.coolenjoy.net/data/editor/2012/3b1073c47486832be39b309351f940f5f3b179ea.png);
+  background-image: url(image/container1.png);
   background-repeat: no-repeat;
-  background-attachment: local;
+  background-attachment: fixed;
   background-size: 100% 100%;
 }
+#footer{
+  position: relative;
+  height: 100px;
+  background-color: RGB(44, 42, 43);
+  margin-top: 20px;
+}
 #container .des1, #container .des2{
-  border: 1px solid rgba(217, 217, 217, 0.5);
+  border: 1px solid rgba(217, 217, 217, 0.7);
   position: relative;
   height: 400px;
   width: 900px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  background-color: rgba(217, 217, 217, 0.5);
+  margin-top: 150px;
+  margin-bottom: 450px;
+  background-color: rgba(217, 217, 217, 0.7);
 }
-
-/*#container .des2{
-  left: calc(100vw - 1100px);
+#container .des2{
+  left: 810px;
 }
-*/
+#container .des1{
+  left: 100px;
+}
+.description1{
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  width: 520px;
+  height: 350px;
+}
+.description1 p{
+  margin-top: 30px;
+  line-height: 40px;
+}
+.description2{
+  position: absolute;
+  top: 25px;
+  left: 50px;
+  width: 520px;
+  height: 350px;
+}
+.description2 p{
+  margin-top: 30px;
+  line-height: 50px;
+}
 .des1 img.content_image_left{
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 25px;
+  left: 25px;
 }
 .des2 img.content_image_right{
   position: absolute;
-
-  top: 10px;
-  right: 10px;
+  top: 25px;
+  right: 25px;
 }
-.des1 > h1{
-  position: absolute;
-  right: 50px;
-  top: 10px;
-}
-.des1 > p{
-  position: absolute;
-  right: 50px;
-  top: 60px;
-}
-.des2 > h1{
-  position: absolute;
-
-  left: 50px;
-  top: 10px;
-}
-.des2 > p{
-  position: absolute;
-
-  left: 50px;
-  top: 60px;
-}
-
-// 메뉴바 부분 시작
 .menu_bar{
   position: absolute;
   bottom: 0;
   width: inherit;
+  font-weight: bold;
 }
 .menu_bar .dep1{
   font-size: 0;
@@ -103,7 +133,8 @@ div{
   display: inline-block;
   width: calc(1920px / 3);
   vertical-align: bottom;
-  background: #ddd;
+  background: #454545;
+  color: white;
   font-size: 16px;
   text-align: center;
 }
@@ -122,20 +153,32 @@ div{
   padding: 10px 0;
 }
 .menu_bar .dep2 a:hover{
+  transition: linear .2s;
   text-decoration: underline;
 }
-// 메뉴바 부분 종료
-
-.goupbtn {
-  top: 60%;
-  left: 80%;
-  width: 50px;
-  height: 50px;
-  border-radius: 80%;
-  background-color: #ffffff;
-  border: red 3px solid;
-  position: fixed;
-  z-index: 2;
+.menu_bar .dep1 .dep2 li a:hover{
+  background-color: green;
+}
+.menu_bar .dep1 .dep2 li a:link{
+  color: white;
+}
+.menu_bar .dep1 .dep2 li a:visited{
+  color: white;
+}
+.menu_bar .dep1 .dep2 + a:hover{
+  background-color: green;
+  transition: linear .2s;
+}
+.menu_bar .dep1 .dep2 + a:visited{
+  color: white;
+}
+.menu_bar .dep1 .dep2 + a:link{
+color: white;
+}
+.footer_inner{
+  margin: 0 auto;
+  text-align: center;
+  color: white;
 }
 #go_top{
   width:50px;
@@ -143,7 +186,7 @@ div{
   padding:0;
   line-height: 50px;;
   display: block;
-  background: RGB(58, 181, 74);
+  background: RGB(103, 147, 172);
   color: #000000;
   font-size: 12px;
   border-radius: 25px;
@@ -153,23 +196,13 @@ div{
   right: 50px;
   z-index: 999999;
 }
-#footer{
-  position: relative;
-  height: 70px;
-  background-color: RGB(44, 42, 43);
-}
-.footer_inner{
-  margin: 0 auto;
-  text-align: center;
-  border: none;
-  color: white;
-}
 .header_slidewrap input[id*="slide"]{
-  display:none;
+  display: none;
+  margin-top: 10px;
 }
 .header_slidewrap .slide-wrap{
   max-width: inherit;
-  min-width: 1521px;
+  min-height: 900px;
   margin:0 auto;
 }
 .header_slidewrap .slidelist{
@@ -188,13 +221,13 @@ div{
   position:relative;
 }
 .header_slidewrap .slidelist > li > a img{
-  width:1920px;
-  height:1080px;
+  width: 100%;
+  height: 950px;
 }
 .header_slidewrap .slidelist label{
   position:absolute;
-  top:40%;
   z-index:10;
+  top:50%;
   transform:translateY(-50%);
   padding:50px;
   cursor:pointer;
@@ -238,7 +271,6 @@ div{
 .header_slidewrap input[id="slide03"]:checked ~ .slide-wrap .slidelist > li{
   transform:translateX(-200%);
 }
-
 .header_slidewrap input[id="slide01"]:checked ~ .slide-wrap li:nth-child(1) .textbox h3{
   opacity:1;
   transform:translateY(0);
@@ -275,13 +307,15 @@ div{
   max-width: 100%;
 }
 .des2{
-
   opacity: 0;
-  margin-left: 1300px;
+  margin-left: 300px;
   max-width: 100%;
 }
-
-#all {
-  display: table; margin-left: auto; margin-right: auto; 
-  /*출처: https://webdir.tistory.com/31 [WEBDIR:티스토리]*/
-} 
+.textbox h3 {
+  text-shadow: 5px 5px #000000;
+  color: #F1C164;
+}
+.textbox p {
+  text-shadow: 2px 2px  #000000;
+  color: #F1C164;
+}
